@@ -15,6 +15,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+
+        let ids = [2158177, 2147714, 2174003]
+
+        let defaults = UserDefaults.standard
+        if (defaults.object(forKey: Constants.kSavedCityIdArray) == nil) {
+            defaults.set(ids, forKey: Constants.kSavedCityIdArray)
+        }
+
         return true
     }
 
