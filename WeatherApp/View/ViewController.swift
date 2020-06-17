@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         self.title = "Your Weather App"
-                
+        
         self.loadData()
     }
     
@@ -34,22 +34,58 @@ class ViewController: UIViewController {
                 print(error.localizedDescription)
             }
         }
-
+    }
+    
+    @objc func addNewCityButtonTapped(_ sender: UIButton){
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let addCityViewController =  storyBoard.instantiateViewController(withIdentifier: "AddCityViewController") as! AddCityViewController
+        // check if new city is selected in the modal view, if yes then reload the data and tableview.
+        addCityViewController.searchCompletion = { flag in
+            if (flag) {
+                self.loadData()
+            }
+        }
+        self.present(addCityViewController, animated:true, completion:nil)
     }
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row == self.cities.count {
+            return 50.0
+        }
+        return 90.0
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.cities.count
+        return self.cities.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath.row == self.cities.count {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "AddCityCell") as! AddCityView
+            cell.addNewCityButton.addTarget(self, action: #selector(addNewCityButtonTapped(_:)), for: .touchUpInside)
+            
+            return cell
+        }
         let cell = tableView.dequeueReusableCell(withIdentifier: "CityCell") as! CityCellView
         
         let cityWeather = self.cities[indexPath.row]
         cell.setData(cityWeather)
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == .delete) {
+            self.cities.remove(at: indexPath.row)
+            self.cityTableView.deleteRows(at: [indexPath], with: .fade)
+        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
