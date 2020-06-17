@@ -10,6 +10,7 @@ import UIKit
 
 struct Constants {
     static let weatherAPIKey = "5d3b73da5d4a73d304454cac4cbd20ef"
+    static let cityJSON = "current.city.list"
     static let kSavedCityIdArray = "savedCityIdArray"
     static let kMeasuringUnit = "measuringUnit"
 

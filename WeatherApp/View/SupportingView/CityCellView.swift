@@ -20,7 +20,5 @@ class CityCellView: UITableViewCell {
         cityNameLabel.text = cityWeather.name
         temperatureLabel.text = cityWeather.main.temp.formatTempString(isCelsius: true)
         backgroundImage.image = UIImage(named: cityWeather.isDay ? "day" : "night")
-        backgroundImage.contentMode = .scaleAspectFill
     }
-
 }

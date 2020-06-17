@@ -23,6 +23,11 @@
 		34C00D22249A104700672F64 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C00D21249A104700672F64 /* WebService.swift */; };
 		34C00D24249A108C00672F64 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C00D23249A108C00672F64 /* NetworkError.swift */; };
 		34C00D27249A137600672F64 /* current.city.list.json in Resources */ = {isa = PBXBuildFile; fileRef = 34C00D26249A137600672F64 /* current.city.list.json */; };
+		34C00D2B249A24E700672F64 /* AddCityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C00D2A249A24E700672F64 /* AddCityView.swift */; };
+		34C00D2D249A2D4500672F64 /* AddCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C00D2C249A2D4500672F64 /* AddCityViewController.swift */; };
+		34C00D30249A3BC700672F64 /* NewCityCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C00D2F249A3BC700672F64 /* NewCityCellView.swift */; };
+		34C00D32249A3C1F00672F64 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C00D31249A3C1F00672F64 /* City.swift */; };
+		34C00D34249A459200672F64 /* AddCityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C00D33249A459200672F64 /* AddCityViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +70,11 @@
 		34C00D21249A104700672F64 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		34C00D23249A108C00672F64 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		34C00D26249A137600672F64 /* current.city.list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = current.city.list.json; sourceTree = "<group>"; };
+		34C00D2A249A24E700672F64 /* AddCityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCityView.swift; sourceTree = "<group>"; };
+		34C00D2C249A2D4500672F64 /* AddCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCityViewController.swift; sourceTree = "<group>"; };
+		34C00D2F249A3BC700672F64 /* NewCityCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCityCellView.swift; sourceTree = "<group>"; };
+		34C00D31249A3C1F00672F64 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		34C00D33249A459200672F64 /* AddCityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCityViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				34C00D112499DDF400672F64 /* Weather.swift */,
+				34C00D31249A3C1F00672F64 /* City.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -169,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				34C00D172499E07A00672F64 /* WeatherViewModel.swift */,
+				34C00D33249A459200672F64 /* AddCityViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -185,8 +197,9 @@
 		34C00D192499E12900672F64 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				34C00D2E249A2D5200672F64 /* SupportingView */,
 				34C00CE32499DBF400672F64 /* ViewController.swift */,
-				34C00D1A2499E19200672F64 /* CityCellView.swift */,
+				34C00D2C249A2D4500672F64 /* AddCityViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -206,6 +219,16 @@
 				34C00D26249A137600672F64 /* current.city.list.json */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		34C00D2E249A2D5200672F64 /* SupportingView */ = {
+			isa = PBXGroup;
+			children = (
+				34C00D1A2499E19200672F64 /* CityCellView.swift */,
+				34C00D2A249A24E700672F64 /* AddCityView.swift */,
+				34C00D2F249A3BC700672F64 /* NewCityCellView.swift */,
+			);
+			path = SupportingView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,14 +365,19 @@
 			files = (
 				34C00D22249A104700672F64 /* WebService.swift in Sources */,
 				34C00D162499DE1E00672F64 /* Extension.swift in Sources */,
+				34C00D2B249A24E700672F64 /* AddCityView.swift in Sources */,
 				34C00D182499E07A00672F64 /* WeatherViewModel.swift in Sources */,
 				34C00D122499DDF400672F64 /* Weather.swift in Sources */,
+				34C00D34249A459200672F64 /* AddCityViewModel.swift in Sources */,
 				34C00CE42499DBF400672F64 /* ViewController.swift in Sources */,
+				34C00D32249A3C1F00672F64 /* City.swift in Sources */,
 				34C00D1B2499E19200672F64 /* CityCellView.swift in Sources */,
+				34C00D2D249A2D4500672F64 /* AddCityViewController.swift in Sources */,
 				34C00CE02499DBF400672F64 /* AppDelegate.swift in Sources */,
 				34C00CE22499DBF400672F64 /* SceneDelegate.swift in Sources */,
 				34C00D1F2499E55800672F64 /* Constants.swift in Sources */,
 				34C00D24249A108C00672F64 /* NetworkError.swift in Sources */,
+				34C00D30249A3BC700672F64 /* NewCityCellView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
