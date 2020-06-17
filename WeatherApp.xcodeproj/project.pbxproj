@@ -17,6 +17,7 @@
 		34C00D022499DBF700672F64 /* WeatherAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C00D012499DBF700672F64 /* WeatherAppUITests.swift */; };
 		34C00D122499DDF400672F64 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C00D112499DDF400672F64 /* Weather.swift */; };
 		34C00D162499DE1E00672F64 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C00D152499DE1E00672F64 /* Extension.swift */; };
+		34C00D182499E07A00672F64 /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C00D172499E07A00672F64 /* WeatherViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		34C00D032499DBF700672F64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34C00D112499DDF400672F64 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		34C00D152499DE1E00672F64 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		34C00D172499E07A00672F64 /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 		34C00D132499DDFE00672F64 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				34C00D172499E07A00672F64 /* WeatherViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				34C00D162499DE1E00672F64 /* Extension.swift in Sources */,
+				34C00D182499E07A00672F64 /* WeatherViewModel.swift in Sources */,
 				34C00D122499DDF400672F64 /* Weather.swift in Sources */,
 				34C00CE42499DBF400672F64 /* ViewController.swift in Sources */,
 				34C00CE02499DBF400672F64 /* AppDelegate.swift in Sources */,
