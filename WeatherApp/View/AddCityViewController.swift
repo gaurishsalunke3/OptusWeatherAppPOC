@@ -26,6 +26,7 @@ class AddCityViewController: UIViewController {
         self.loadData()
     }
     
+    // loads the city data from local json file.
     private func loadData() {
         self.addCityVM.getCitiesFromJSON{ [weak self] result in
             switch result {
@@ -40,19 +41,8 @@ class AddCityViewController: UIViewController {
         }
     }
 
+    // search city based on the real time text entered in the searc box.
     func searchCity(searchText: String) {
-//        self.addCityVM.searchCity{ [weak self] result in
-//            switch result {
-//            case .success(let cities):
-//                self?.cities.removeAll()
-//                self?.cities = cities
-//                self?.cityTableView.reloadData()
-//
-//            case .failure(let error):
-//                print(error.localizedDescription)
-//            }
-//        }
-        
         if searchText.isEmpty {
             self.filteredCities = self.cities
         } else {
@@ -64,6 +54,7 @@ class AddCityViewController: UIViewController {
         self.cityTableView.reloadData()
     }
     
+    // dismisses the modal view
     @IBAction func cancelButtonTapped(_ sender: UIButton){
         self.dismiss(animated: true, completion: nil)
     }
@@ -111,10 +102,6 @@ extension AddCityViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension AddCityViewController: UITextFieldDelegate {
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        print("Editing!")
-    }
-    
     func textFieldDidChangeSelection(_ textField: UITextField) {
         self.searchCity(searchText: textField.text!)
     }

@@ -32,7 +32,6 @@ final class AddCityViewModel: ObservableObject {
         WebService().getRequest(for: [City].self, with: url)
             .catch { _ in Just(self.cities) }
             .receive(on: RunLoop.main)
-//            .assign(to: \.cities, on: self)
             .sink(receiveValue: { cities in
                 completion(.success(cities))
             })

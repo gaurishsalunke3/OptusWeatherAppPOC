@@ -27,10 +27,19 @@ class WeatherDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        // hide the navigation bar
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+
         self.configureView()
     }
     
+    // change the status bar text color so that the status bar content is visible clearly in the dark background
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+
+    // assigns the data to the respective labels.
     func configureView() {
         self.view.backgroundColor = (cityWeather?.isDay ?? true) ? UIColor(red: 0/255, green: 197/255, blue: 246/255, alpha: 1) : UIColor(red: 45/255, green: 57/255, blue: 64/255, alpha: 1)
 
@@ -53,6 +62,7 @@ class WeatherDetailViewController: UIViewController {
         visibilityLabel.text = cityWeather?.visibility.formatVisibility()
     }
     
+    // replaces the open weahter api icon with the apple system icons (with those which closely resembles the open weather api icons)
     func getWeatherIcon(icon: String) -> UIImage {
         switch icon {
         case "01d": return UIImage(systemName: "sun.max")!
@@ -78,6 +88,7 @@ class WeatherDetailViewController: UIViewController {
         }
     }
     
+    // get the proper direction of wind based on the degrees
     func getDirection(degrees: Double, speed: Double) -> String {
         var direction = ""
         if (degrees != -1) {
@@ -102,5 +113,10 @@ class WeatherDetailViewController: UIViewController {
         }
         
         return speed.formatWind()
+    }
+    
+    // back button to navigate back to the home view.
+    @IBAction func btnBackTapped(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
     }
 }

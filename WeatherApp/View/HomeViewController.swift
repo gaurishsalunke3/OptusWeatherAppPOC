@@ -13,21 +13,27 @@ class HomeViewController: UIViewController {
     @IBOutlet var cityTableView: UITableView!
     
     var weatherVM = WeatherViewModel()
-    var cities = [Weather]()
+    var savedCities = [Weather]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.title = "The Weather App"
         
+        // setting font color and size for the title
+        self.navigationController?.navigationBar.titleTextAttributes =
+        [NSAttributedString.Key.foregroundColor: UIColor.black,
+         NSAttributedString.Key.font: UIFont.systemFont(ofSize: 22, weight: UIFont.Weight.medium)]
+        
         self.loadData()
     }
     
+    // loads the weather data for all the saved cities from api.
     private func loadData() {
         self.weatherVM.getCurrentWeatherForMultipleCities { [weak self] result in
             switch result {
             case .success(let cities):
-                self?.cities = cities
+                self?.savedCities = cities
                 self?.cityTableView.reloadData()
                 
             case .failure(let error):
@@ -36,6 +42,7 @@ class HomeViewController: UIViewController {
         }
     }
     
+    // Presents the search city view in a modal view
     @objc func addNewCityButtonTapped(_ sender: UIButton){
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let addCityViewController =  storyboard.instantiateViewController(withIdentifier: "AddCityViewController") as! AddCityViewController
@@ -52,18 +59,18 @@ class HomeViewController: UIViewController {
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.row == self.cities.count {
+        if indexPath.row == self.savedCities.count {
             return 50.0
         }
         return 90.0
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.cities.count + 1
+        return self.savedCities.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row == self.cities.count {
+        if indexPath.row == self.savedCities.count {
             let cell = tableView.dequeueReusableCell(withIdentifier: "AddCityCell") as! AddCityView
             cell.addNewCityButton.addTarget(self, action: #selector(addNewCityButtonTapped(_:)), for: .touchUpInside)
             
@@ -71,7 +78,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         }
         let cell = tableView.dequeueReusableCell(withIdentifier: "CityCell") as! CityCellView
         
-        let cityWeather = self.cities[indexPath.row]
+        let cityWeather = self.savedCities[indexPath.row]
         cell.setData(cityWeather)
         
         return cell
@@ -83,7 +90,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if (editingStyle == .delete) {
-            self.cities.remove(at: indexPath.row)
+            self.savedCities.remove(at: indexPath.row)
             self.cityTableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
@@ -91,7 +98,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let weatherDetailViewController =  storyboard.instantiateViewController(withIdentifier: "WeatherDetailViewController") as! WeatherDetailViewController
-        weatherDetailViewController.cityWeather = self.cities[indexPath.row]
+        weatherDetailViewController.cityWeather = self.savedCities[indexPath.row]
         self.navigationController?.pushViewController(weatherDetailViewController, animated: true)
     }
 }

@@ -45,7 +45,7 @@ extension Double {
     }
     
     func formatWind() -> String {
-        return String(format: "%.0f kph", self)
+        return String(format: "%d kph", self)
     }
 }
 

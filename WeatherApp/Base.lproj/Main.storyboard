@@ -160,7 +160,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="270-A9-UtU">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search city name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="270-A9-UtU">
                                 <rect key="frame" x="20" y="40" width="294" height="40"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -413,7 +413,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1cN-um-Gfj">
-                                <rect key="frame" x="20" y="406" width="394" height="1"/>
+                                <rect key="frame" x="0.0" y="406" width="414" height="1"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="sAs-v3-lUW"/>
@@ -426,6 +426,20 @@
                                     <constraint firstAttribute="height" constant="1" id="TPy-gT-yYf"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WNA-zS-eOE">
+                                <rect key="frame" x="10" y="44" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Hnu-Jh-bFQ"/>
+                                    <constraint firstAttribute="width" constant="44" id="rJI-9v-1Rh"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="line.horizontal.3" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="semibold"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnBackTapped:" destination="6Yp-CX-fqD" eventType="touchUpInside" id="iCt-mO-L86"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -448,6 +462,7 @@
                             <constraint firstItem="tUD-EU-aYO" firstAttribute="top" secondItem="dWb-xH-QfK" secondAttribute="bottom" constant="30" id="IMP-Tm-NFp"/>
                             <constraint firstItem="Qil-sC-tXr" firstAttribute="trailing" secondItem="nHC-EN-Iyk" secondAttribute="trailing" constant="20" id="JpW-rm-gHT"/>
                             <constraint firstItem="OWt-5N-BYT" firstAttribute="top" secondItem="lRs-K1-7io" secondAttribute="bottom" constant="40" id="OMX-El-BV1"/>
+                            <constraint firstItem="WNA-zS-eOE" firstAttribute="top" secondItem="Qil-sC-tXr" secondAttribute="top" id="PDF-h9-07x"/>
                             <constraint firstItem="HMD-0d-rdK" firstAttribute="top" secondItem="OWt-5N-BYT" secondAttribute="bottom" constant="20" id="Pvc-yH-JTW"/>
                             <constraint firstItem="4Jc-Bq-Eip" firstAttribute="top" secondItem="jff-zp-GOq" secondAttribute="top" id="Qek-w5-Hsl"/>
                             <constraint firstItem="xt5-nJ-ibO" firstAttribute="top" secondItem="E15-ba-lCI" secondAttribute="bottom" constant="10" id="QnG-o6-bV0"/>
@@ -460,8 +475,9 @@
                             <constraint firstItem="nHC-EN-Iyk" firstAttribute="top" secondItem="87t-Pt-5jt" secondAttribute="bottom" constant="5" id="Zvg-lV-qr8"/>
                             <constraint firstItem="Qil-sC-tXr" firstAttribute="trailing" secondItem="OWt-5N-BYT" secondAttribute="trailing" constant="20" id="aKV-Dp-p4B"/>
                             <constraint firstItem="Qil-sC-tXr" firstAttribute="trailing" secondItem="1cN-um-Gfj" secondAttribute="trailing" id="azB-rS-T8x"/>
+                            <constraint firstItem="WNA-zS-eOE" firstAttribute="leading" secondItem="Qil-sC-tXr" secondAttribute="leading" constant="10" id="bgC-lq-DbF"/>
                             <constraint firstItem="fO7-Ng-20Z" firstAttribute="top" secondItem="nHC-EN-Iyk" secondAttribute="bottom" constant="10" id="c0a-oa-Taq"/>
-                            <constraint firstItem="1cN-um-Gfj" firstAttribute="leading" secondItem="Qil-sC-tXr" secondAttribute="leading" constant="20" id="dTu-RI-E0d"/>
+                            <constraint firstItem="1cN-um-Gfj" firstAttribute="leading" secondItem="Qil-sC-tXr" secondAttribute="leading" id="dTu-RI-E0d"/>
                             <constraint firstItem="YGX-g7-f96" firstAttribute="top" secondItem="xt5-nJ-ibO" secondAttribute="top" id="erR-92-7Fd"/>
                             <constraint firstItem="uKv-t4-vgb" firstAttribute="top" secondItem="XGi-Sr-Wm6" secondAttribute="top" id="g18-Ux-XZF"/>
                             <constraint firstItem="dWb-xH-QfK" firstAttribute="leading" secondItem="XGi-Sr-Wm6" secondAttribute="leading" id="gNr-QG-FXm"/>
@@ -517,4 +533,7 @@
             <point key="canvasLocation" x="131.8840579710145" y="100.44642857142857"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="line.horizontal.3" catalog="system" width="128" height="64"/>
+    </resources>
 </document>

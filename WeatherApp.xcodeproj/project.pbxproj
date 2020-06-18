@@ -200,9 +200,9 @@
 			isa = PBXGroup;
 			children = (
 				34C00D2E249A2D5200672F64 /* SupportingView */,
+				34C00D2C249A2D4500672F64 /* AddCityViewController.swift */,
 				34C00CE32499DBF400672F64 /* HomeViewController.swift */,
 				34C00D35249B137F00672F64 /* WeatherDetailViewController.swift */,
-				34C00D2C249A2D4500672F64 /* AddCityViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
