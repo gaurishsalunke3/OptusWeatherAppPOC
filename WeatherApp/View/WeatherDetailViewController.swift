@@ -28,12 +28,22 @@ class WeatherDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // hide the navigation bar
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
-
         self.configureView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // hide the navigation bar
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        // hide the navigation bar
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+    }
     // change the status bar text color so that the status bar content is visible clearly in the dark background
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
