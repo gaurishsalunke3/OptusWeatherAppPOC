@@ -15,11 +15,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="tLV-41-xge">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLV-41-xge">
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CityCell" rowHeight="90" id="YKl-GE-lSq" customClass="CityCellView" customModule="WeatherApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CityWeatherCell" rowHeight="90" id="YKl-GE-lSq" customClass="CityWeatherCellView" customModule="WeatherApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YKl-GE-lSq" id="A9h-sJ-bE0">
@@ -74,7 +74,7 @@
                                             <outlet property="temperatureLabel" destination="02V-nK-M26" id="7QY-gJ-1ps"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="AddCity" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AddCityCell" rowHeight="50" id="dYi-pB-xiP" customClass="AddCityView" customModule="WeatherApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FooterCell" rowHeight="50" id="dYi-pB-xiP" customClass="FooterCellView" customModule="WeatherApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="118" width="414" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dYi-pB-xiP" id="gZQ-A9-1vO">
@@ -136,9 +136,9 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="tLV-41-xge" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JGK-eL-oUM"/>
+                            <constraint firstItem="tLV-41-xge" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="JGK-eL-oUM"/>
                             <constraint firstAttribute="bottom" secondItem="tLV-41-xge" secondAttribute="bottom" id="V9m-ls-OYe"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tLV-41-xge" secondAttribute="trailing" id="lGd-zH-HFR"/>
+                            <constraint firstAttribute="trailing" secondItem="tLV-41-xge" secondAttribute="trailing" id="lGd-zH-HFR"/>
                             <constraint firstItem="tLV-41-xge" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="tZZ-eb-Hpa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -185,7 +185,7 @@
                                     <action selector="cancelButtonTapped:" destination="OxC-jO-xPf" eventType="touchUpInside" id="pyD-u5-N89"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qCz-gP-szE">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCz-gP-szE">
                                 <rect key="frame" x="0.0" y="100" width="414" height="796"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
@@ -215,10 +215,10 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="qCz-gP-szE" firstAttribute="leading" secondItem="t6z-21-xHk" secondAttribute="leading" id="Cfw-lG-Ggp"/>
-                            <constraint firstItem="t6z-21-xHk" firstAttribute="trailing" secondItem="qCz-gP-szE" secondAttribute="trailing" id="NO8-1F-O2j"/>
+                            <constraint firstItem="qCz-gP-szE" firstAttribute="leading" secondItem="LK5-tb-nUQ" secondAttribute="leading" id="Cfw-lG-Ggp"/>
+                            <constraint firstAttribute="trailing" secondItem="qCz-gP-szE" secondAttribute="trailing" id="NO8-1F-O2j"/>
                             <constraint firstItem="270-A9-UtU" firstAttribute="top" secondItem="LK5-tb-nUQ" secondAttribute="top" constant="40" id="NOe-hP-nxJ"/>
-                            <constraint firstItem="270-A9-UtU" firstAttribute="leading" secondItem="LK5-tb-nUQ" secondAttribute="leading" constant="20" id="PgQ-LR-hh1"/>
+                            <constraint firstItem="270-A9-UtU" firstAttribute="leading" secondItem="t6z-21-xHk" secondAttribute="leading" constant="20" id="PgQ-LR-hh1"/>
                             <constraint firstItem="qCz-gP-szE" firstAttribute="top" secondItem="270-A9-UtU" secondAttribute="bottom" constant="20" id="j7e-gh-f4r"/>
                             <constraint firstItem="t6z-21-xHk" firstAttribute="trailing" secondItem="1WU-pk-rXv" secondAttribute="trailing" constant="20" id="oOD-IB-OmS"/>
                             <constraint firstItem="1WU-pk-rXv" firstAttribute="centerY" secondItem="270-A9-UtU" secondAttribute="centerY" id="rt8-C3-YQN"/>
