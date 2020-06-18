@@ -20,12 +20,17 @@ extension Int {
         return formatter.string(from: time)
     }
     
+    func formatHumidity() -> String {
+        return String(format: "%d%%", self)
+    }
+
     func formatPressure() -> String {
         return String(format: "%d hPa", self)
     }
-
-    func formatHumidity() -> String {
-        return String(format: "%d %", self)
+    
+    func formatVisibility() -> String {
+        let visibility = Double(self)/1000
+        return String(format: "%.0f km%@", visibility, visibility > 1 ? "s" : "")
     }
 }
 
@@ -40,7 +45,7 @@ extension Double {
     }
     
     func formatWind() -> String {
-        return String(format: "%.0f m/s", self)
+        return String(format: "%.0f kph", self)
     }
 }
 

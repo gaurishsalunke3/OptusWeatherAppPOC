@@ -22,6 +22,7 @@ struct Weather: Codable, Identifiable {
     let main: Main
     let wind: Wind
     let clouds: Cloud
+    let visibility: Int
     
     var localTime: String {
         return dt.formatDate(timezoneOffset: sys.timezone)
@@ -38,6 +39,14 @@ struct Coord: Codable {
 
 struct Sys: Codable {
     let timezone, sunrise, sunset: Int
+    
+    var localSunriseTime: String {
+        return sunrise.formatDate(timezoneOffset: timezone)
+    }
+    
+    var localSunsetTime: String {
+        return sunset.formatDate(timezoneOffset: timezone)
+    }
 }
 
 struct WeatherData: Codable, Identifiable {
@@ -52,6 +61,7 @@ struct Main: Codable {
 
 struct Wind: Codable {
     let speed: Double
+    let deg: Double
 }
 
 struct Cloud: Codable {
