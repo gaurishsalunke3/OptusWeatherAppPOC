@@ -18,14 +18,13 @@
 		34C00D122499DDF400672F64 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C00D112499DDF400672F64 /* Weather.swift */; };
 		34C00D162499DE1E00672F64 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C00D152499DE1E00672F64 /* Extension.swift */; };
 		34C00D182499E07A00672F64 /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C00D172499E07A00672F64 /* WeatherViewModel.swift */; };
-		34C00D1B2499E19200672F64 /* CityCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C00D1A2499E19200672F64 /* CityCellView.swift */; };
+		34C00D1B2499E19200672F64 /* CityWeatherCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C00D1A2499E19200672F64 /* CityWeatherCellView.swift */; };
 		34C00D1F2499E55800672F64 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C00D1E2499E55800672F64 /* Constants.swift */; };
 		34C00D22249A104700672F64 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C00D21249A104700672F64 /* WebService.swift */; };
 		34C00D24249A108C00672F64 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C00D23249A108C00672F64 /* NetworkError.swift */; };
 		34C00D27249A137600672F64 /* current.city.list.json in Resources */ = {isa = PBXBuildFile; fileRef = 34C00D26249A137600672F64 /* current.city.list.json */; };
-		34C00D2B249A24E700672F64 /* AddCityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C00D2A249A24E700672F64 /* AddCityView.swift */; };
+		34C00D2B249A24E700672F64 /* FooterCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C00D2A249A24E700672F64 /* FooterCellView.swift */; };
 		34C00D2D249A2D4500672F64 /* AddCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C00D2C249A2D4500672F64 /* AddCityViewController.swift */; };
-		34C00D30249A3BC700672F64 /* NewCityCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C00D2F249A3BC700672F64 /* NewCityCellView.swift */; };
 		34C00D32249A3C1F00672F64 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C00D31249A3C1F00672F64 /* City.swift */; };
 		34C00D34249A459200672F64 /* AddCityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C00D33249A459200672F64 /* AddCityViewModel.swift */; };
 		34C00D36249B137F00672F64 /* WeatherDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C00D35249B137F00672F64 /* WeatherDetailViewController.swift */; };
@@ -66,14 +65,13 @@
 		34C00D112499DDF400672F64 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		34C00D152499DE1E00672F64 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		34C00D172499E07A00672F64 /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
-		34C00D1A2499E19200672F64 /* CityCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCellView.swift; sourceTree = "<group>"; };
+		34C00D1A2499E19200672F64 /* CityWeatherCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityWeatherCellView.swift; sourceTree = "<group>"; };
 		34C00D1E2499E55800672F64 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		34C00D21249A104700672F64 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		34C00D23249A108C00672F64 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		34C00D26249A137600672F64 /* current.city.list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = current.city.list.json; sourceTree = "<group>"; };
-		34C00D2A249A24E700672F64 /* AddCityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCityView.swift; sourceTree = "<group>"; };
+		34C00D2A249A24E700672F64 /* FooterCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterCellView.swift; sourceTree = "<group>"; };
 		34C00D2C249A2D4500672F64 /* AddCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCityViewController.swift; sourceTree = "<group>"; };
-		34C00D2F249A3BC700672F64 /* NewCityCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCityCellView.swift; sourceTree = "<group>"; };
 		34C00D31249A3C1F00672F64 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		34C00D33249A459200672F64 /* AddCityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCityViewModel.swift; sourceTree = "<group>"; };
 		34C00D35249B137F00672F64 /* WeatherDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailViewController.swift; sourceTree = "<group>"; };
@@ -227,9 +225,8 @@
 		34C00D2E249A2D5200672F64 /* SupportingView */ = {
 			isa = PBXGroup;
 			children = (
-				34C00D1A2499E19200672F64 /* CityCellView.swift */,
-				34C00D2A249A24E700672F64 /* AddCityView.swift */,
-				34C00D2F249A3BC700672F64 /* NewCityCellView.swift */,
+				34C00D1A2499E19200672F64 /* CityWeatherCellView.swift */,
+				34C00D2A249A24E700672F64 /* FooterCellView.swift */,
 			);
 			path = SupportingView;
 			sourceTree = "<group>";
@@ -368,20 +365,19 @@
 			files = (
 				34C00D22249A104700672F64 /* WebService.swift in Sources */,
 				34C00D162499DE1E00672F64 /* Extension.swift in Sources */,
-				34C00D2B249A24E700672F64 /* AddCityView.swift in Sources */,
+				34C00D2B249A24E700672F64 /* FooterCellView.swift in Sources */,
 				34C00D182499E07A00672F64 /* WeatherViewModel.swift in Sources */,
 				34C00D122499DDF400672F64 /* Weather.swift in Sources */,
 				34C00D34249A459200672F64 /* AddCityViewModel.swift in Sources */,
 				34C00CE42499DBF400672F64 /* HomeViewController.swift in Sources */,
 				34C00D32249A3C1F00672F64 /* City.swift in Sources */,
-				34C00D1B2499E19200672F64 /* CityCellView.swift in Sources */,
+				34C00D1B2499E19200672F64 /* CityWeatherCellView.swift in Sources */,
 				34C00D2D249A2D4500672F64 /* AddCityViewController.swift in Sources */,
 				34C00D36249B137F00672F64 /* WeatherDetailViewController.swift in Sources */,
 				34C00CE02499DBF400672F64 /* AppDelegate.swift in Sources */,
 				34C00CE22499DBF400672F64 /* SceneDelegate.swift in Sources */,
 				34C00D1F2499E55800672F64 /* Constants.swift in Sources */,
 				34C00D24249A108C00672F64 /* NetworkError.swift in Sources */,
-				34C00D30249A3BC700672F64 /* NewCityCellView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddCityView: UITableViewCell {
+class FooterCellView: UITableViewCell {
 
     @IBOutlet var celsiusButton: UIButton!
     @IBOutlet var farenheitButton: UIButton!

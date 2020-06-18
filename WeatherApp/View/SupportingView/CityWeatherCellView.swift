@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CityCellView: UITableViewCell {
+class CityWeatherCellView: UITableViewCell {
 
     @IBOutlet var cityTimeLabel: UILabel!
     @IBOutlet var cityNameLabel: UILabel!

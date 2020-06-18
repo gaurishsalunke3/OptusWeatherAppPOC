@@ -71,12 +71,12 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == self.savedCities.count {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "AddCityCell") as! AddCityView
+            let cell = tableView.dequeueReusableCell(withIdentifier: "FooterCell") as! FooterCellView
             cell.addNewCityButton.addTarget(self, action: #selector(addNewCityButtonTapped(_:)), for: .touchUpInside)
             
             return cell
         }
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CityCell") as! CityCellView
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CityWeatherCell") as! CityWeatherCellView
         
         let cityWeather = self.savedCities[indexPath.row]
         cell.setData(cityWeather)
