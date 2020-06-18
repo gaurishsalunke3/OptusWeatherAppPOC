@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HomeViewController.swift
 //  WeatherApp
 //
 //  Created by Gaurish Salunke on 6/17/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class HomeViewController: UIViewController {
     
     @IBOutlet var cityTableView: UITableView!
     
@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Your Weather App"
+        self.title = "The Weather App"
         
         self.loadData()
     }
@@ -37,8 +37,8 @@ class ViewController: UIViewController {
     }
     
     @objc func addNewCityButtonTapped(_ sender: UIButton){
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let addCityViewController =  storyBoard.instantiateViewController(withIdentifier: "AddCityViewController") as! AddCityViewController
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let addCityViewController =  storyboard.instantiateViewController(withIdentifier: "AddCityViewController") as! AddCityViewController
         // check if new city is selected in the modal view, if yes then reload the data and tableview.
         addCityViewController.searchCompletion = { flag in
             if (flag) {
@@ -49,7 +49,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
+extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == self.cities.count {
@@ -89,7 +89,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let weatherDetailViewController =  storyboard.instantiateViewController(withIdentifier: "WeatherDetailViewController") as! WeatherDetailViewController
+        weatherDetailViewController.cityWeather = self.cities[indexPath.row]
+        self.navigationController?.pushViewController(weatherDetailViewController, animated: true)
     }
 }
 
