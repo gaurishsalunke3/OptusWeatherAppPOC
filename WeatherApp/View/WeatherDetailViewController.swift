@@ -72,14 +72,14 @@ class WeatherDetailViewController: UIViewController {
         cityNameLabel.text = cityWeather?.name
         shortDescriptionLabel.text = cityWeather?.weather[0].main
         iconImage.image = self.getWeatherIcon(icon: cityWeather?.weather[0].icon ?? "")
-        temperatureLabel.text = cityWeather?.main.temp.formatTempString(isCelsius: true)
+        temperatureLabel.text = cityWeather?.main.temp.formatTempString()
         
-        longDescriptionLabel.text = "TODAY: \(cityWeather?.weather[0].description.capitalizingFirstLetter() ?? ""). The high will be \(cityWeather?.main.tempMin.formatTempString(isCelsius: true) ?? "") and a low of \(cityWeather?.main.tempMin.formatTempString(isCelsius: true) ?? "")."
+        longDescriptionLabel.text = "TODAY: \(cityWeather?.weather[0].description.capitalizingFirstLetter() ?? ""). The high will be \(cityWeather?.main.tempMin.formatTempString() ?? "") and a low of \(cityWeather?.main.tempMin.formatTempString() ?? "")."
         
         sunriseLabel.text = cityWeather?.sys.localSunriseTime
         sunsetLabel.text = cityWeather?.sys.localSunsetTime
         
-        feelLikeLabel.text = cityWeather?.main.feelsLike.formatTempString(isCelsius: true)
+        feelLikeLabel.text = cityWeather?.main.feelsLike.formatTempString()
         humidityLabel.text = cityWeather?.main.humidity.formatHumidity()
         
         pressureLabel.text = cityWeather?.main.pressure.formatPressure()

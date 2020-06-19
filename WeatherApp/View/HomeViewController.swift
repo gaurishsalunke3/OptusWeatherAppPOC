@@ -74,6 +74,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == self.savedCities.count {
             let cell = tableView.dequeueReusableCell(withIdentifier: "FooterCell") as! FooterCellView
+            cell.delegate = self
+            
             cell.addNewCityButton.addTarget(self, action: #selector(addNewCityButtonTapped(_:)), for: .touchUpInside)
             
             return cell
@@ -102,6 +104,16 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         let weatherDetailViewController =  storyboard.instantiateViewController(withIdentifier: "WeatherDetailViewController") as! WeatherDetailViewController
         weatherDetailViewController.cityWeather = self.savedCities[indexPath.row]
         self.navigationController?.pushViewController(weatherDetailViewController, animated: true)
+    }
+}
+
+// MARK: TableView Update Delegate Method
+
+extension HomeViewController: TableViewUpdateDelegate {
+    
+    // Updates the tableview once degree measurement is updated (celsius/farenheit)
+    func updateTableView() {
+        cityTableView.reloadData()
     }
 }
 

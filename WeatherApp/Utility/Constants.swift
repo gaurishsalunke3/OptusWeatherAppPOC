@@ -13,6 +13,7 @@ struct Constants {
     static let cityJSON = "current.city.list"
     static let kSavedCityIdArray = "savedCityIdArray"
     static let kMeasuringUnit = "measuringUnit"
+    static let kIsCelsius = "isCelsius"
 
     struct Cells {
         static let cityCell = "CityCell"

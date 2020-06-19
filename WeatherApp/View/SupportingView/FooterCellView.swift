@@ -8,11 +8,17 @@
 
 import UIKit
 
+protocol TableViewUpdateDelegate: class {
+    func updateTableView()
+}
+
 class FooterCellView: UITableViewCell {
 
     @IBOutlet var celsiusButton: UIButton!
-    @IBOutlet var farenheitButton: UIButton!
+    @IBOutlet var fahrenheitButton: UIButton!
     @IBOutlet var addNewCityButton: UIButton!
+    
+    weak var delegate: TableViewUpdateDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,5 +29,26 @@ class FooterCellView: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    @IBAction func celsiusButtonTapped(_ sender: UIButton) {
+        celsiusButton.isSelected = true
+        fahrenheitButton.isSelected = false
+
+        self.setDegreeMeasurement(true)
+    }
+
+    @IBAction func fahrenheitButtonTapped(_ sender: UIButton) {
+        celsiusButton.isSelected = false
+        fahrenheitButton.isSelected = true
+
+        self.setDegreeMeasurement(false)
+    }
+    
+    func setDegreeMeasurement(_ flag: Bool) {
+        let defaults = UserDefaults.standard
+        defaults.set(flag, forKey: Constants.kIsCelsius)
+        
+        delegate?.updateTableView()
     }
 }

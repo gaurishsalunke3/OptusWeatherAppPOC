@@ -18,7 +18,7 @@ class CityWeatherCellView: UITableViewCell {
     func setData(_ cityWeather: Weather) {
         cityTimeLabel.text = cityWeather.localTime
         cityNameLabel.text = cityWeather.name
-        temperatureLabel.text = cityWeather.main.temp.formatTempString(isCelsius: true)
+        temperatureLabel.text = cityWeather.main.temp.formatTempString()
         backgroundImage.image = UIImage(named: cityWeather.isDay ? "day" : "night")
     }
 }

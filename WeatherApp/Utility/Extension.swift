@@ -36,7 +36,16 @@ extension Int {
 }
 
 extension Double {
-    func formatTempString(isCelsius: Bool) -> String {
+    func formatTempString() -> String {
+        var isCelsius: Bool
+        
+        let defaults = UserDefaults.standard
+        if defaults.object(forKey: Constants.kIsCelsius) == nil {
+            isCelsius = true
+        } else {
+            isCelsius = defaults.object(forKey: Constants.kIsCelsius) as! Bool
+        }
+        
         if isCelsius {
             return String(format: "%.0f%@", self, "\u{00B0}")
         } else {
