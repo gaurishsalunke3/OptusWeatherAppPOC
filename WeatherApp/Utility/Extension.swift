@@ -31,7 +31,7 @@ extension Int {
     
     func formatVisibility() -> String {
         let visibility = Double(self)/1000
-        return String(format: "%.0f km%@", visibility, visibility > 1 ? "s" : "")
+        return String(format: "%.1f km%@", visibility, visibility > 1 ? "s" : "")
     }
 }
 
@@ -55,7 +55,7 @@ extension Double {
     }
     
     func formatWind() -> String {
-        return String(format: "%d kph", self)
+        return String(format: "%.1f kph", self)
     }
 }
 
