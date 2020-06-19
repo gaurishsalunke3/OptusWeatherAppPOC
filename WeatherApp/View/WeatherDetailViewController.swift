@@ -23,11 +23,18 @@ class WeatherDetailViewController: UIViewController {
     @IBOutlet var windLabel: UILabel!
     @IBOutlet var visibilityLabel: UILabel!
     
+    @IBOutlet var topContainerView: UIView!
+    @IBOutlet var bottomContainerView: UIView!
+    @IBOutlet var dividerPortrait: UIView!
+    @IBOutlet var dividerLandscape: UIView!
+    @IBOutlet var dividerShort: UIView!
+    
     var cityWeather: Weather? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.configureOrientation()
         self.configureView()
     }
     
@@ -44,21 +51,30 @@ class WeatherDetailViewController: UIViewController {
         // hide the navigation bar
         self.navigationController?.setNavigationBarHidden(false, animated: false)
     }
+    
     // change the status bar text color so that the status bar content is visible clearly in the dark background
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
-
+    
+    func configureOrientation() {
+        if UIScreen.main.bounds.height > UIScreen.main.bounds.width {
+            configureConstraintsForPortraitView()
+        } else {
+            configureContraintsForLandscapeView()
+        }
+    }
+    
     // assigns the data to the respective labels.
     func configureView() {
         self.view.backgroundColor = (cityWeather?.isDay ?? true) ? UIColor(red: 0/255, green: 197/255, blue: 246/255, alpha: 1) : UIColor(red: 45/255, green: 57/255, blue: 64/255, alpha: 1)
-
+        
         cityNameLabel.text = cityWeather?.name
         shortDescriptionLabel.text = cityWeather?.weather[0].main
         iconImage.image = self.getWeatherIcon(icon: cityWeather?.weather[0].icon ?? "")
         temperatureLabel.text = cityWeather?.main.temp.formatTempString(isCelsius: true)
         
-        longDescriptionLabel.text = "TODAY: \(cityWeather?.weather[0].description ?? ""). The high will be \(cityWeather?.main.tempMin.formatTempString(isCelsius: true) ?? "") and a low of \(cityWeather?.main.tempMin.formatTempString(isCelsius: true) ?? "")."
+        longDescriptionLabel.text = "TODAY: \(cityWeather?.weather[0].description.capitalizingFirstLetter() ?? ""). The high will be \(cityWeather?.main.tempMin.formatTempString(isCelsius: true) ?? "") and a low of \(cityWeather?.main.tempMin.formatTempString(isCelsius: true) ?? "")."
         
         sunriseLabel.text = cityWeather?.sys.localSunriseTime
         sunsetLabel.text = cityWeather?.sys.localSunsetTime
@@ -71,7 +87,17 @@ class WeatherDetailViewController: UIViewController {
         
         visibilityLabel.text = cityWeather?.visibility.formatVisibility()
     }
-    
+        
+    // back button to navigate back to the home view.
+    @IBAction func btnBackTapped(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
+}
+
+// MARK: Helper Methods
+
+extension WeatherDetailViewController {
+ 
     // replaces the open weahter api icon with the apple system icons (with those which closely resembles the open weather api icons)
     func getWeatherIcon(icon: String) -> UIImage {
         switch icon {
@@ -124,9 +150,52 @@ class WeatherDetailViewController: UIViewController {
         
         return speed.formatWind()
     }
+}
+
+// MARK: Constraint Handling for Orientation
+
+extension WeatherDetailViewController {
     
-    // back button to navigate back to the home view.
-    @IBAction func btnBackTapped(_ sender: UIButton) {
-        self.navigationController?.popViewController(animated: true)
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        if UIDevice.current.orientation.isPortrait {
+            
+            configureConstraintsForPortraitView()
+        } else {
+            
+            configureContraintsForLandscapeView()
+        }
+    }
+    
+    func configureConstraintsForPortraitView() {
+        let width = UIScreen.main.bounds.width
+        let height = UIScreen.main.bounds.height
+        
+        topContainerView.translatesAutoresizingMaskIntoConstraints = false
+        topContainerView.widthAnchor.constraint(equalToConstant: width).isActive = true
+        if width > height {
+            topContainerView.heightAnchor.constraint(equalToConstant: width * 0.546).isActive = true
+        } else {
+            topContainerView.heightAnchor.constraint(equalToConstant: height * 0.546).isActive = true
+        }
+
+        dividerPortrait.isHidden = false
+        dividerShort.isHidden  = false
+
+        longDescriptionLabel.textAlignment = .left
+    }
+    
+    func configureContraintsForLandscapeView() {
+        let width = UIScreen.main.bounds.width
+                
+        topContainerView.translatesAutoresizingMaskIntoConstraints = false
+        topContainerView.heightAnchor.constraint(equalToConstant: width).isActive = true
+        
+        bottomContainerView.translatesAutoresizingMaskIntoConstraints = false
+        bottomContainerView.heightAnchor.constraint(equalToConstant: width).isActive = true
+        
+        dividerPortrait.isHidden = true
+        dividerShort.isHidden = true
+        longDescriptionLabel.textAlignment = .center
     }
 }

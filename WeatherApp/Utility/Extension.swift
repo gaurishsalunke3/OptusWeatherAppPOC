@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 extension Int {
     func formatDate(timezoneOffset: Int) -> String {
@@ -49,6 +50,19 @@ extension Double {
     }
 }
 
+extension String {
+    // This method converts the first letter to CAPS.
+    // Used to fix the cityWeather?.weather[0].description property,
+    // which is returned as all lower case in the api response.
+    func capitalizingFirstLetter() -> String {
+      return prefix(1).uppercased() + self.dropFirst()
+    }
+
+    mutating func capitalizeFirstLetter() {
+      self = self.capitalizingFirstLetter()
+    }
+}
+
 extension URL {
     func withQueries(_ queries: [String: String]) -> URL? {
         guard var component = URLComponents(url: self, resolvingAgainstBaseURL: true) else {
@@ -57,5 +71,15 @@ extension URL {
         
         component.queryItems = queries.map { URLQueryItem(name: $0.key, value: $0.value) }
         return component.url
+    }
+}
+
+extension UIView {
+    func pin(to superView: UIView) {
+        translatesAutoresizingMaskIntoConstraints = false
+        topAnchor.constraint(equalTo: superView.topAnchor).isActive = true
+        leadingAnchor.constraint(equalTo: superView.leadingAnchor).isActive = true
+        trailingAnchor.constraint(equalTo: superView.trailingAnchor).isActive = true
+        bottomAnchor.constraint(equalTo: superView.bottomAnchor).isActive = true
     }
 }

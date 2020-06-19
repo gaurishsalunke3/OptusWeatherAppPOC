@@ -56,6 +56,8 @@ class HomeViewController: UIViewController {
     }
 }
 
+// MARK: UITableView Delegate Methods
+
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
