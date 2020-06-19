@@ -28,6 +28,8 @@
 		34C00D32249A3C1F00672F64 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C00D31249A3C1F00672F64 /* City.swift */; };
 		34C00D34249A459200672F64 /* AddCityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C00D33249A459200672F64 /* AddCityViewModel.swift */; };
 		34C00D36249B137F00672F64 /* WeatherDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C00D35249B137F00672F64 /* WeatherDetailViewController.swift */; };
+		34C00D38249CB32100672F64 /* HomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C00D37249CB32100672F64 /* HomeViewControllerTests.swift */; };
+		34C00D3A249CBDCF00672F64 /* HomeViewControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C00D39249CBDCF00672F64 /* HomeViewControllerUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,8 @@
 		34C00D31249A3C1F00672F64 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		34C00D33249A459200672F64 /* AddCityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCityViewModel.swift; sourceTree = "<group>"; };
 		34C00D35249B137F00672F64 /* WeatherDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailViewController.swift; sourceTree = "<group>"; };
+		34C00D37249CB32100672F64 /* HomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTests.swift; sourceTree = "<group>"; };
+		34C00D39249CBDCF00672F64 /* HomeViewControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerUITests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +147,7 @@
 		34C00CF52499DBF700672F64 /* WeatherAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				34C00D37249CB32100672F64 /* HomeViewControllerTests.swift */,
 				34C00CF62499DBF700672F64 /* WeatherAppTests.swift */,
 				34C00CF82499DBF700672F64 /* Info.plist */,
 			);
@@ -152,6 +157,7 @@
 		34C00D002499DBF700672F64 /* WeatherAppUITests */ = {
 			isa = PBXGroup;
 			children = (
+				34C00D39249CBDCF00672F64 /* HomeViewControllerUITests.swift */,
 				34C00D012499DBF700672F64 /* WeatherAppUITests.swift */,
 				34C00D032499DBF700672F64 /* Info.plist */,
 			);
@@ -386,6 +392,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				34C00CF72499DBF700672F64 /* WeatherAppTests.swift in Sources */,
+				34C00D38249CB32100672F64 /* HomeViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +401,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				34C00D022499DBF700672F64 /* WeatherAppUITests.swift in Sources */,
+				34C00D3A249CBDCF00672F64 /* HomeViewControllerUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

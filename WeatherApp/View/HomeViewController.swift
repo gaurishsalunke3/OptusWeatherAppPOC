@@ -11,10 +11,12 @@ import UIKit
 class HomeViewController: UIViewController {
     
     @IBOutlet var cityTableView: UITableView!
+    var activityIndicator: UIActivityIndicatorView!
     
+    var timer = Timer()
     var weatherVM = WeatherViewModel()
     var savedCities = [Weather]()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,20 +26,43 @@ class HomeViewController: UIViewController {
         self.navigationController?.navigationBar.titleTextAttributes =
         [NSAttributedString.Key.foregroundColor: UIColor.black,
          NSAttributedString.Key.font: UIFont.systemFont(ofSize: 22, weight: UIFont.Weight.medium)]
-        
+                
+        self.configureActivityIndicatorView()
+        self.scheduleTimerToLoadWeatherData()
         self.loadData()
     }
     
+    func configureActivityIndicatorView() {
+        activityIndicator = UIActivityIndicatorView.init(style: .medium)
+        activityIndicator.color = .black
+
+        let barButton = UIBarButtonItem.init(customView: activityIndicator)
+        self.navigationItem.rightBarButtonItem = barButton
+    }
+    
+    // Timer to fetc the Weather data after periodic time interval. Currently set to 10 secs
+    private func scheduleTimerToLoadWeatherData() {
+        timer = Timer.scheduledTimer(timeInterval: Constants.kTimer, target: self, selector: #selector(self.updateCounting), userInfo: nil, repeats: true)
+    }
+    
+    @objc func updateCounting(){
+        self.loadData()
+    }
+
     // loads the weather data for all the saved cities from api.
     private func loadData() {
+        self.activityIndicator.startAnimating()
+        
         self.weatherVM.getCurrentWeatherForMultipleCities { [weak self] result in
             switch result {
             case .success(let cities):
                 self?.savedCities = cities
                 self?.cityTableView.reloadData()
-                
+                self?.activityIndicator.stopAnimating()
+
             case .failure(let error):
                 print(error.localizedDescription)
+                self?.activityIndicator.stopAnimating()
             }
         }
     }

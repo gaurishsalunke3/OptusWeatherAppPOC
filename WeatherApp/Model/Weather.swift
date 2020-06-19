@@ -22,7 +22,7 @@ struct Weather: Codable, Identifiable {
     let main: Main
     let wind: Wind
     let clouds: Cloud
-    let visibility: Int
+    let visibility: Int?
     
     var localTime: String {
         return dt.formatDate(timezoneOffset: sys.timezone)

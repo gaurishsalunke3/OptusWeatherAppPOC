@@ -85,7 +85,7 @@ class WeatherDetailViewController: UIViewController {
         pressureLabel.text = cityWeather?.main.pressure.formatPressure()
         windLabel.text = self.getDirection(degrees: cityWeather?.wind.deg ?? -1, speed: cityWeather?.wind.speed ?? 0)
         
-        visibilityLabel.text = cityWeather?.visibility.formatVisibility()
+        visibilityLabel.text = cityWeather?.visibility?.formatVisibility()
     }
         
     // back button to navigate back to the home view.

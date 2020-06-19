@@ -24,9 +24,9 @@ final class WeatherViewModel {
         let citiesArray = defaults.object(forKey: Constants.kSavedCityIdArray) as! [Int]
         
         if citiesArray.count > 0 {
-            let cities = self.getCitiesString(array: citiesArray)
+            let citiesId = self.getCitiesString(array: citiesArray)
 
-            let query = ["appid": "\(Constants.weatherAPIKey)", "units": "\(unit)", "id": "\(cities)"]
+            let query = ["appid": "\(Constants.weatherAPIKey)", "units": "\(unit)", "id": "\(citiesId)"]
             
             guard let url = URL(string: Constants.API.getMutipleCityCurrentWeatherBaseURL)?.withQueries(query) else {
                 fatalError("Invalid URL.")

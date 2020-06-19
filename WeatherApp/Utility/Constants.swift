@@ -14,7 +14,8 @@ struct Constants {
     static let kSavedCityIdArray = "savedCityIdArray"
     static let kMeasuringUnit = "measuringUnit"
     static let kIsCelsius = "isCelsius"
-
+    static let kTimer = TimeInterval(10)
+    
     struct Cells {
         static let cityCell = "CityCell"
     }
