@@ -57,6 +57,7 @@ class WeatherDetailViewController: UIViewController {
         return .lightContent
     }
     
+    // This method configures the orientation on view load.
     func configureOrientation() {
         if UIScreen.main.bounds.height > UIScreen.main.bounds.width {
             configureConstraintsForPortraitView()

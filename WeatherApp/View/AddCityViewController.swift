@@ -69,6 +69,8 @@ class AddCityViewController: UIViewController {
     }
 }
 
+// MARK: UITableView Deleagte Methods
+
 extension AddCityViewController: UITableViewDelegate, UITableViewDataSource {
         
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -110,6 +112,8 @@ extension AddCityViewController: UITableViewDelegate, UITableViewDataSource {
         return false
     }
 }
+
+// MARK: UITextField Delegate Method
 
 extension AddCityViewController: UITextFieldDelegate {
     func textFieldDidChangeSelection(_ textField: UITextField) {

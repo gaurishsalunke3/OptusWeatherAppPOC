@@ -36,6 +36,7 @@ extension Int {
 }
 
 extension Double {
+    // convers the temp from celsius to fahrenheit
     func formatTempString() -> String {
         var isCelsius: Bool
         

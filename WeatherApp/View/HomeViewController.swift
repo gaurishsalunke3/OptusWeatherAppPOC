@@ -34,6 +34,7 @@ class HomeViewController: UIViewController {
         self.loadData()
     }
     
+    // configure the activity indicator in place of the right bar button inside the navigation bar.
     func configureActivityIndicatorView() {
         activityIndicator = UIActivityIndicatorView.init(style: .medium)
         activityIndicator.color = .black
@@ -44,10 +45,11 @@ class HomeViewController: UIViewController {
     
     // Timer to fetc the Weather data after periodic time interval. Currently set to 10 secs
     private func scheduleTimerToLoadWeatherData() {
-        timer = Timer.scheduledTimer(timeInterval: Constants.kTimer, target: self, selector: #selector(self.updateCounting), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: Constants.kTimer, target: self, selector: #selector(self.updateWeatherInfo), userInfo: nil, repeats: true)
     }
     
-    @objc func updateCounting(){
+    // This methods updates the wheather info after periodic time interval.
+    @objc func updateWeatherInfo(){
         self.loadData()
     }
 
