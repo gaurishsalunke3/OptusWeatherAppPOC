@@ -238,6 +238,14 @@
                                     <outlet property="delegate" destination="OxC-jO-xPf" id="Zai-mt-qyJ"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="PmU-3I-JAN">
+                                <rect key="frame" x="284" y="50" width="20" height="20"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="563-dw-OZZ"/>
+                                    <constraint firstAttribute="height" constant="20" id="ugI-Ex-nde"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -245,7 +253,9 @@
                             <constraint firstAttribute="trailing" secondItem="qCz-gP-szE" secondAttribute="trailing" id="NO8-1F-O2j"/>
                             <constraint firstItem="270-A9-UtU" firstAttribute="top" secondItem="LK5-tb-nUQ" secondAttribute="top" constant="40" id="NOe-hP-nxJ"/>
                             <constraint firstItem="270-A9-UtU" firstAttribute="leading" secondItem="t6z-21-xHk" secondAttribute="leading" constant="20" id="PgQ-LR-hh1"/>
+                            <constraint firstItem="1WU-pk-rXv" firstAttribute="leading" secondItem="PmU-3I-JAN" secondAttribute="trailing" constant="20" id="TMP-Ij-UnZ"/>
                             <constraint firstItem="qCz-gP-szE" firstAttribute="top" secondItem="270-A9-UtU" secondAttribute="bottom" constant="20" id="j7e-gh-f4r"/>
+                            <constraint firstItem="PmU-3I-JAN" firstAttribute="top" secondItem="270-A9-UtU" secondAttribute="top" constant="10" id="kvi-Bx-8Qp"/>
                             <constraint firstItem="t6z-21-xHk" firstAttribute="trailing" secondItem="1WU-pk-rXv" secondAttribute="trailing" constant="20" id="oOD-IB-OmS"/>
                             <constraint firstItem="1WU-pk-rXv" firstAttribute="centerY" secondItem="270-A9-UtU" secondAttribute="centerY" id="rt8-C3-YQN"/>
                             <constraint firstAttribute="bottom" secondItem="qCz-gP-szE" secondAttribute="bottom" id="xUS-ih-FFB"/>
@@ -254,6 +264,7 @@
                         <viewLayoutGuide key="safeArea" id="t6z-21-xHk"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="PmU-3I-JAN" id="hLh-st-2Z0"/>
                         <outlet property="cityTableView" destination="qCz-gP-szE" id="Ove-Rb-V29"/>
                         <outlet property="searchTextField" destination="270-A9-UtU" id="bbe-03-qe7"/>
                     </connections>
@@ -472,6 +483,7 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WNA-zS-eOE">
                                 <rect key="frame" x="10" y="44" width="44" height="44"/>
+                                <accessibility key="accessibilityConfiguration" identifier="HomeButton" label="HomeButton"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Hnu-Jh-bFQ"/>
                                     <constraint firstAttribute="width" constant="44" id="rJI-9v-1Rh"/>

@@ -12,6 +12,7 @@ class AddCityViewController: UIViewController {
 
     @IBOutlet var searchTextField: UITextField!
     @IBOutlet var cityTableView: UITableView!
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
 
     var addCityVM = AddCityViewModel()
     var cities = [City]()
@@ -23,26 +24,33 @@ class AddCityViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.cityTableView.accessibilityIdentifier = "table-addCityTableView"
         self.loadData()
     }
     
     // loads the city data from local json file.
     private func loadData() {
+        self.activityIndicator.startAnimating()
+
         self.addCityVM.getCitiesFromJSON{ [weak self] result in
             switch result {
             case .success(let cities):
                 self?.cities = cities
                 self?.filteredCities = cities
                 self?.cityTableView.reloadData()
-                
+                self?.activityIndicator.stopAnimating()
+
             case .failure(let error):
                 print(error.localizedDescription)
+                self?.activityIndicator.stopAnimating()
             }
         }
     }
 
     // search city based on the real time text entered in the searc box.
     func searchCity(searchText: String) {
+        self.activityIndicator.startAnimating()
+
         if searchText.isEmpty {
             self.filteredCities = self.cities
         } else {
@@ -52,6 +60,7 @@ class AddCityViewController: UIViewController {
         }
         
         self.cityTableView.reloadData()
+        self.activityIndicator.stopAnimating()
     }
     
     // dismisses the modal view
@@ -68,6 +77,7 @@ extension AddCityViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NewCityCell", for: indexPath)
+        cell.accessibilityIdentifier = "NewCityCell_\(indexPath.row)"
 
         let city = self.filteredCities[indexPath.row]
         cell.textLabel?.text = city.place

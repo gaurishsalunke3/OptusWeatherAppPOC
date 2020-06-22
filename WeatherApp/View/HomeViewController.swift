@@ -27,6 +27,8 @@ class HomeViewController: UIViewController {
         [NSAttributedString.Key.foregroundColor: UIColor.black,
          NSAttributedString.Key.font: UIFont.systemFont(ofSize: 22, weight: UIFont.Weight.medium)]
                 
+        self.cityTableView.accessibilityIdentifier = "table-cityTableView"
+
         self.configureActivityIndicatorView()
         self.scheduleTimerToLoadWeatherData()
         self.loadData()
@@ -100,15 +102,17 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         if indexPath.row == self.savedCities.count {
             let cell = tableView.dequeueReusableCell(withIdentifier: "FooterCell") as! FooterCellView
             cell.delegate = self
+            cell.accessibilityIdentifier = "FooterCell_0"
             
             cell.addNewCityButton.addTarget(self, action: #selector(addNewCityButtonTapped(_:)), for: .touchUpInside)
             
             return cell
         }
         let cell = tableView.dequeueReusableCell(withIdentifier: "CityWeatherCell") as! CityWeatherCellView
-        
+        cell.accessibilityIdentifier = "CityWeatherCell_\(indexPath.row)"
+
         let cityWeather = self.savedCities[indexPath.row]
-        cell.setData(cityWeather)
+        cell.setData(cityWeather, index: indexPath.row)
         
         return cell
     }

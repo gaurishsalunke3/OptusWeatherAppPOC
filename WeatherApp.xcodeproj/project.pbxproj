@@ -30,6 +30,7 @@
 		34C00D36249B137F00672F64 /* WeatherDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C00D35249B137F00672F64 /* WeatherDetailViewController.swift */; };
 		34C00D38249CB32100672F64 /* HomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C00D37249CB32100672F64 /* HomeViewControllerTests.swift */; };
 		34C00D3A249CBDCF00672F64 /* HomeViewControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C00D39249CBDCF00672F64 /* HomeViewControllerUITests.swift */; };
+		34E4223924A05A1A0081ED9B /* AddCityViewControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E4223824A05A1A0081ED9B /* AddCityViewControllerUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		34C00D35249B137F00672F64 /* WeatherDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailViewController.swift; sourceTree = "<group>"; };
 		34C00D37249CB32100672F64 /* HomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTests.swift; sourceTree = "<group>"; };
 		34C00D39249CBDCF00672F64 /* HomeViewControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerUITests.swift; sourceTree = "<group>"; };
+		34E4223824A05A1A0081ED9B /* AddCityViewControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCityViewControllerUITests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +159,7 @@
 		34C00D002499DBF700672F64 /* WeatherAppUITests */ = {
 			isa = PBXGroup;
 			children = (
+				34E4223824A05A1A0081ED9B /* AddCityViewControllerUITests.swift */,
 				34C00D39249CBDCF00672F64 /* HomeViewControllerUITests.swift */,
 				34C00D012499DBF700672F64 /* WeatherAppUITests.swift */,
 				34C00D032499DBF700672F64 /* Info.plist */,
@@ -400,6 +403,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34E4223924A05A1A0081ED9B /* AddCityViewControllerUITests.swift in Sources */,
 				34C00D022499DBF700672F64 /* WeatherAppUITests.swift in Sources */,
 				34C00D3A249CBDCF00672F64 /* HomeViewControllerUITests.swift in Sources */,
 			);
