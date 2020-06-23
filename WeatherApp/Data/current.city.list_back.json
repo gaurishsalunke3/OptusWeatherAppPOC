@@ -1,0 +1,546 @@
+[
+  {
+    "id": 1275339,
+    "coord": {
+      "lon": 72.847939,
+      "lat": 19.01441
+    },
+    "country": "IN",
+    "geoname": {
+      "cl": "P",
+      "code": "PPLA",
+      "parent": 1264418
+    },
+    "name": "Mumbai",
+    "stat": {
+      "level": 1.0,
+      "population": 1000000
+    },
+    "zoom": 1
+  },
+  {
+    "id": 1259229,
+    "coord": {
+      "lon": 73.855347,
+      "lat": 18.519569
+    },
+    "country": "IN",
+    "geoname": {
+      "cl": "P",
+      "code": "PPL",
+      "parent": 1264418
+    },
+    "name": "Pune",
+    "stat": {
+      "level": 1.0,
+      "population": 9999
+    },
+    "zoom": 8
+  },
+  {
+    "id": 2643743,
+    "coord": {
+      "lon": -0.12574,
+      "lat": 51.50853
+    },
+    "country": "GB",
+    "geoname": {
+      "cl": "P",
+      "code": "PPLC",
+      "parent": 3333218
+    },
+    "name": "London",
+    "stat": {
+      "level": 1.0,
+      "population": 1E+6
+    },
+    "stations": [
+      {
+        "id": 5091,
+        "dist": 13,
+        "kf": 1
+      },
+      {
+        "id": 9031,
+        "dist": 15,
+        "kf": 1
+      },
+      {
+        "id": 27779,
+        "dist": 12,
+        "kf": 1
+      },
+      {
+        "id": 29619,
+        "dist": 16,
+        "kf": 1
+      },
+      {
+        "id": 31271,
+        "dist": 21,
+        "kf": 1
+      },
+      {
+        "id": 32325,
+        "dist": 14,
+        "kf": 1
+      },
+      {
+        "id": 32399,
+        "dist": 14,
+        "kf": 1
+      },
+      {
+        "id": 33202,
+        "dist": 11,
+        "kf": 1
+      }
+    ],
+    "zoom": 13
+  },
+  {
+    "id": 1261481,
+    "coord": {
+      "lon": 77.23114,
+      "lat": 28.61282
+    },
+    "country": "IN",
+    "geoname": {
+      "cl": "P",
+      "code": "PPLC",
+      "parent": 1273293
+    },
+    "name": "New Delhi",
+    "stat": {
+      "level": 1.0,
+      "population": 15000
+    },
+    "stations": [
+      {
+        "id": 7809,
+        "dist": 12,
+        "kf": 1
+      },
+      {
+        "id": 35561,
+        "dist": 9,
+        "kf": 1
+      }
+    ],
+    "zoom": 13
+  },
+  {
+    "id": 292223,
+    "coord": {
+      "lon": 55.304722,
+      "lat": 25.258169
+    },
+    "country": "AE",
+    "geoname": {
+      "cl": "P",
+      "code": "PPLA",
+      "parent": 292224
+    },
+    "name": "Dubai",
+    "stat": {
+      "level": 1.0,
+      "population": 1137347
+    },
+    "stations": [
+      {
+        "id": 7100,
+        "dist": 5,
+        "kf": 1
+      },
+      {
+        "id": 7104,
+        "dist": 23,
+        "kf": 1
+      }
+    ],
+    "zoom": 5
+  },
+  {
+    "id": 112931,
+    "coord": {
+      "lon": 51.421509,
+      "lat": 35.694389
+    },
+    "country": "IR",
+    "geoname": {
+      "cl": "P",
+      "code": "PPLC",
+      "parent": 110791
+    },
+    "name": "Tehran",
+    "stat": {
+      "level": 1.0,
+      "population": 7153309
+    },
+    "stations": [
+      {
+        "id": 7032,
+        "dist": 10,
+        "kf": 1
+      }
+    ],
+    "zoom": 1
+  },
+  {
+    "id": 3067696,
+    "coord": {
+      "lon": 14.42076,
+      "lat": 50.088039
+    },
+    "country": "CZ",
+    "geoname": {
+      "cl": "P",
+      "code": "PPLC",
+      "parent": 3077311
+    },
+    "langs": [
+      {
+        "am": "ፕራግ"
+      },
+      {
+        "ar": "براغ"
+      },
+      {
+        "arc": "ܦܪܓ"
+      },
+      {
+        "be": "Прага"
+      },
+      {
+        "bg": "Прага"
+      },
+      {
+        "bo": "པུ་ལ་ཁེ"
+      },
+      {
+        "bs": "Prag"
+      },
+      {
+        "ca": "Praga"
+      },
+      {
+        "cs": "Praha"
+      },
+      {
+        "csb": "Praga"
+      },
+      {
+        "cy": "Prâg"
+      },
+      {
+        "da": "Prag"
+      },
+      {
+        "de": "Prag"
+      },
+      {
+        "el": "Πράγα"
+      },
+      {
+        "en": "Prague"
+      },
+      {
+        "eo": "Prago"
+      },
+      {
+        "es": "Praga"
+      },
+      {
+        "et": "Praha"
+      },
+      {
+        "eu": "Praga"
+      },
+      {
+        "fa": "پراگ"
+      },
+      {
+        "fi": "Praha"
+      },
+      {
+        "fr": "Prague"
+      },
+      {
+        "ga": "Prág"
+      },
+      {
+        "gd": "Pràg"
+      },
+      {
+        "gl": "Praga"
+      },
+      {
+        "he": "פראג"
+      },
+      {
+        "hr": "Prag"
+      },
+      {
+        "hsb": "Praha"
+      },
+      {
+        "hu": "Prága"
+      },
+      {
+        "ia": "Praga"
+      },
+      {
+        "iata": "PRG"
+      },
+      {
+        "id": "Praha"
+      },
+      {
+        "io": "Praha"
+      },
+      {
+        "is": "Prag"
+      },
+      {
+        "it": "Praga"
+      },
+      {
+        "ja": "プラハ"
+      },
+      {
+        "ka": "პრაღა"
+      },
+      {
+        "ko": "프라하"
+      },
+      {
+        "ku": "Prag"
+      },
+      {
+        "la": "Praga"
+      },
+      {
+        "lb": "Prag"
+      },
+      {
+        "li": "Praag"
+      },
+      {
+        "link": "http://en.wikipedia.org/wiki/Prague"
+      },
+      {
+        "lt": "Praha"
+      },
+      {
+        "lv": "Prāga"
+      },
+      {
+        "na": "Praha"
+      },
+      {
+        "nl": "Praag"
+      },
+      {
+        "nn": "Praha"
+      },
+      {
+        "no": "Praha"
+      },
+      {
+        "nrm": "Prague"
+      },
+      {
+        "oc": "Praga"
+      },
+      {
+        "os": "Прагæ"
+      },
+      {
+        "pl": "Praga"
+      },
+      {
+        "pt": "Praga"
+      },
+      {
+        "ro": "Praga"
+      },
+      {
+        "ru": "Прага"
+      },
+      {
+        "sh": "Prag"
+      },
+      {
+        "sk": "Praha"
+      },
+      {
+        "sl": "Praga"
+      },
+      {
+        "sq": "Praga"
+      },
+      {
+        "sr": "Праг"
+      },
+      {
+        "sv": "Prag"
+      },
+      {
+        "tg": "Прага"
+      },
+      {
+        "th": "ปราก"
+      },
+      {
+        "tl": "Prague"
+      },
+      {
+        "tr": "Prag"
+      },
+      {
+        "ug": "پراگا"
+      },
+      {
+        "uk": "Прага"
+      },
+      {
+        "vi": "Praha"
+      },
+      {
+        "zh": "布拉格"
+      }
+    ],
+    "name": "Prague",
+    "stat": {
+      "level": 1.0,
+      "population": 1165581
+    },
+    "stations": [
+      {
+        "id": 5889,
+        "dist": 7,
+        "kf": 1
+      },
+      {
+        "id": 5898,
+        "dist": 11,
+        "kf": 1
+      },
+      {
+        "id": 9505,
+        "dist": 28,
+        "kf": 1
+      },
+      {
+        "id": 9844,
+        "dist": 8,
+        "kf": 1
+      },
+      {
+        "id": 10011,
+        "dist": 3,
+        "kf": 1
+      },
+      {
+        "id": 10045,
+        "dist": 12,
+        "kf": 1
+      },
+      {
+        "id": 10067,
+        "dist": 17,
+        "kf": 1
+      },
+      {
+        "id": 10290,
+        "dist": 6,
+        "kf": 1
+      },
+      {
+        "id": 10307,
+        "dist": 5,
+        "kf": 1
+      },
+      {
+        "id": 10361,
+        "dist": 5,
+        "kf": 1
+      },
+      {
+        "id": 10744,
+        "dist": 47,
+        "kf": 1
+      },
+      {
+        "id": 10854,
+        "dist": 7,
+        "kf": 1
+      },
+      {
+        "id": 31304,
+        "dist": 2,
+        "kf": 1
+      }
+    ],
+    "zoom": 6
+  },
+  {
+    "id": 4219762,
+    "coord": {
+      "lon": -85.164673,
+      "lat": 34.257038
+    },
+    "country": "US",
+    "geoname": {
+      "cl": "P",
+      "code": "PPLA2",
+      "parent": 4195536
+    },
+    "langs": [
+      {
+        "link": "http://en.wikipedia.org/wiki/Rome%2C_Georgia"
+      },
+      {
+        "post": "30162"
+      }
+    ],
+    "name": "Rome",
+    "stat": {
+      "level": 1.0,
+      "population": 36303
+    },
+    "stations": [
+      {
+        "id": 217,
+        "dist": 24,
+        "kf": 1
+      },
+      {
+        "id": 794,
+        "dist": 10,
+        "kf": 1
+      },
+      {
+        "id": 9192,
+        "dist": 48,
+        "kf": 1
+      },
+      {
+        "id": 9586,
+        "dist": 44,
+        "kf": 1
+      },
+      {
+        "id": 31718,
+        "dist": 47,
+        "kf": 1
+      },
+      {
+        "id": 32856,
+        "dist": 10,
+        "kf": 1
+      }
+    ],
+    "zoom": 8
+  }
+]
